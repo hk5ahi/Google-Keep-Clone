@@ -90,6 +90,7 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
+              "src/assets/svg/*.svg",
               "src/assets"
             ],
             "styles": [
