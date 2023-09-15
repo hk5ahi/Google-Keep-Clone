@@ -8,6 +8,11 @@ import {KeepSideBarComponent} from "../keep-container/keep-side-bar/keep-side-ba
 import {KeepContentComponent} from "../keep-container/keep-content/keep-content.component";
 import {KeepAddNotesComponent} from "../keep-container/keep-content/keep-add-notes/keep-add-notes.component";
 import {KeepNotesComponent} from "../keep-container/keep-content/keep-notes/keep-notes.component";
+import {FormsModule} from "@angular/forms";
+import {NoteService} from "../Service/note.service";
+import {
+  KeepNotesArchiveComponent
+} from "../keep-container/keep-content/keep-notes-archive/keep-notes-archive.component";
 
 @NgModule({
   declarations: [
@@ -16,14 +21,16 @@ import {KeepNotesComponent} from "../keep-container/keep-content/keep-notes/keep
     KeepSideBarComponent,
     KeepContainerComponent,
     KeepContentComponent,
-      KeepAddNotesComponent,
-      KeepNotesComponent
+    KeepAddNotesComponent,
+    KeepNotesComponent,
+    KeepNotesArchiveComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [NoteService,KeepNotesComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
